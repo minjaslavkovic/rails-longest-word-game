@@ -10,8 +10,10 @@
 
 <p>What is the longest word you can find?</p>
 
+<!-- <form action="/score/<%=@letters.join%>" method="post"> -->
 <form action="/score" method="post">
   <input type="text" name="word" class="text">
   <input type="submit" value="Play" class="btn">
+  <input type="hidden" name="from_letters" value="<%=@letters.join%>">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
